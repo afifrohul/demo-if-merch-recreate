@@ -1,0 +1,87 @@
+{
+  "success": true,
+  "message": "Product fetched successfully.",
+  "data": {
+    "id": 13,
+    "name": "SPECIAL BUNDLE",
+    "slug": "special-bundle",
+    "description": "SPECIAL BUNDLE ALERT! Buat harimu makin keren dan bermakna dengan Bundle Hemat",
+    "status": "released",
+    "category": "Bundling",
+    "image": "products/20251031_072447_h5FCpxt7.png",
+    "variants": [
+      {
+        "id": 37,
+        "product_id": 13,
+        "name": "WASH SHIRT + TUMBLR + KEYCHAIN",
+        "sku": "BUND-001",
+        "price": "185000.00",
+        "stock": 10,
+        "created_at": "2025-10-31T00:58:21.000000Z",
+        "updated_at": "2025-10-31T00:58:21.000000Z"
+      },
+      {
+        "id": 38,
+        "product_id": 13,
+        "name": "WASH HAT + 3 PIN + TOTEBAG",
+        "sku": "BUND-002",
+        "price": "90000.00",
+        "stock": 10,
+        "created_at": "2025-10-31T00:59:15.000000Z",
+        "updated_at": "2025-10-31T00:59:15.000000Z"
+      },
+      {
+        "id": 39,
+        "product_id": 13,
+        "name": "LANYARD + 3 PIN + BUCKET HAT",
+        "sku": "BUND-003",
+        "price": "50000.00",
+        "stock": 10,
+        "created_at": "2025-10-31T00:59:55.000000Z",
+        "updated_at": "2025-10-31T00:59:55.000000Z"
+      },
+      {
+        "id": 40,
+        "product_id": 13,
+        "name": "STICKER + 3 PIN + WORKSHIRT",
+        "sku": "BUND-004",
+        "price": "170000.00",
+        "stock": 10,
+        "created_at": "2025-10-31T01:00:38.000000Z",
+        "updated_at": "2025-10-31T01:00:38.000000Z"
+      }
+    ],
+    "galleries": [
+      {
+        "id": 14,
+        "product_id": 13,
+        "image": "product-galleries/20251031_085100_PcZ0AXOd.png",
+        "created_at": "2025-10-31T01:51:00.000000Z",
+        "updated_at": "2025-10-31T01:51:00.000000Z"
+      },
+      {
+        "id": 15,
+        "product_id": 13,
+        "image": "product-galleries/20251031_085115_ntf2Qabe.png",
+        "created_at": "2025-10-31T01:51:15.000000Z",
+        "updated_at": "2025-10-31T01:51:15.000000Z"
+      },
+      {
+        "id": 16,
+        "product_id": 13,
+        "image": "product-galleries/20251031_085131_8tl05hjd.png",
+        "created_at": "2025-10-31T01:51:31.000000Z",
+        "updated_at": "2025-10-31T01:51:31.000000Z"
+      },
+      {
+        "id": 17,
+        "product_id": 13,
+        "image": "product-galleries/20251031_085153_NbRp3IrC.png",
+        "created_at": "2025-10-31T01:51:53.000000Z",
+        "updated_at": "2025-10-31T01:51:53.000000Z"
+      }
+    ],
+    "created_at": "2025-10-31T00:24:47.000000Z",
+    "updated_at": "2025-10-31T00:25:55.000000Z"
+  }
+}

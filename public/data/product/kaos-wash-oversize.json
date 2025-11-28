@@ -1,0 +1,66 @@
+{
+  "success": true,
+  "message": "Product fetched successfully.",
+  "data": {
+    "id": 11,
+    "name": "KAOS WASH OVERSIZE",
+    "slug": "kaos-wash-oversize",
+    "description": "[ Baju Wash ] Nikmati kenyamanan maksimal dengan Baju Wash. Bahan lembut dan desain kekinian, pas untuk aktivitas harian. Material: Katun washed.",
+    "status": "released",
+    "category": "Clothes",
+    "image": "products/20251031_072144_NSWBG3nc.png",
+    "variants": [
+      {
+        "id": 15,
+        "product_id": 11,
+        "name": "Lengan Pendek M",
+        "sku": "SHRT-WO-LK-M",
+        "price": "120000.00",
+        "stock": 10,
+        "created_at": "2025-10-31T00:41:08.000000Z",
+        "updated_at": "2025-10-31T00:41:08.000000Z"
+      },
+      {
+        "id": 16,
+        "product_id": 11,
+        "name": "Lengan Pendek L",
+        "sku": "SHRT-WO-LK-L",
+        "price": "120000.00",
+        "stock": 10,
+        "created_at": "2025-10-31T00:43:08.000000Z",
+        "updated_at": "2025-10-31T00:41:08.000000Z"
+      },
+      {
+        "id": 17,
+        "product_id": 11,
+        "name": "Lengan Pendek XL",
+        "sku": "SHRT-WO-LK-XL",
+        "price": "120000.00",
+        "stock": 10,
+        "created_at": "2025-10-31T00:44:08.000000Z",
+        "updated_at": "2025-10-31T00:41:08.000000Z"
+      },
+      {
+        "id": 18,
+        "product_id": 11,
+        "name": "Lengan Pendek XXL",
+        "sku": "SHRT-WO-LK-XXL",
+        "price": "120000.00",
+        "stock": 10,
+        "created_at": "2025-10-31T00:45:08.000000Z",
+        "updated_at": "2025-10-31T00:41:08.000000Z"
+      }
+    ],
+    "galleries": [
+      {
+        "id": 10,
+        "product_id": 11,
+        "image": "product-galleries/20251031_084645_AfiQ7ygE.png",
+        "created_at": "2025-10-31T01:46:45.000000Z",
+        "updated_at": "2025-10-31T01:46:45.000000Z"
+      }
+    ],
+    "created_at": "2025-10-31T00:21:44.000000Z",
+    "updated_at": "2025-10-31T00:21:44.000000Z"
+  }
+}

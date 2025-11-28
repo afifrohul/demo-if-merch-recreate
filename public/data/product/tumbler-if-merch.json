@@ -1,0 +1,60 @@
+{
+  "success": true,
+  "message": "Product fetched successfully.",
+  "data": {
+    "id": 6,
+    "name": "TUMBLER IF MERCH",
+    "slug": "tumbler-if-merch",
+    "description": "[ Tumbler ] Tetap terhidrasi dengan Tumbler. Desain modern dan tahan panas/dingin, cocok untuk dibawa ke kampus atau kantor. Material: steel stainless",
+    "status": "released",
+    "category": "Merchandise",
+    "image": "products/20251107_144205_0OzYkRkD.png",
+    "variants": [
+      {
+        "id": 41,
+        "product_id": 6,
+        "name": "Tumbler Dino",
+        "sku": "TMB-DN",
+        "price": "59000.00",
+        "stock": 10,
+        "created_at": "2025-10-31T01:07:58.000000Z",
+        "updated_at": "2025-10-31T01:07:58.000000Z"
+      },
+      {
+        "id": 42,
+        "product_id": 6,
+        "name": "Tumbler Informatics",
+        "sku": "TMB-INF",
+        "price": "59000.00",
+        "stock": 10,
+        "created_at": "2025-10-31T01:08:20.000000Z",
+        "updated_at": "2025-10-31T01:10:54.000000Z"
+      }
+    ],
+    "galleries": [
+      {
+        "id": 19,
+        "product_id": 6,
+        "image": "product-galleries/20251031_085308_SpF8mYi9.png",
+        "created_at": "2025-10-31T01:53:08.000000Z",
+        "updated_at": "2025-10-31T01:53:08.000000Z"
+      },
+      {
+        "id": 20,
+        "product_id": 6,
+        "image": "product-galleries/20251107_142337_a7dMlxuu.png",
+        "created_at": "2025-10-31T01:53:20.000000Z",
+        "updated_at": "2025-11-07T07:23:37.000000Z"
+      },
+      {
+        "id": 21,
+        "product_id": 6,
+        "image": "product-galleries/20251107_142331_Q0fMFEIg.png",
+        "created_at": "2025-10-31T01:53:29.000000Z",
+        "updated_at": "2025-11-07T07:23:31.000000Z"
+      }
+    ],
+    "created_at": "2025-10-31T00:12:55.000000Z",
+    "updated_at": "2025-11-07T07:42:05.000000Z"
+  }
+}

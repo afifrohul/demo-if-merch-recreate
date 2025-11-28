@@ -1,0 +1,127 @@
+{
+  "success": true,
+  "message": "Product fetched successfully.",
+  "data": {
+    "id": 4,
+    "name": "Jacket Informatics",
+    "slug": "jacket-informatics",
+    "description": "Hi, Selamat Datang Di IF Merch, nikmati beragam product kami dengan kualitas yang premium!! IF merch adalah Product Merchandise dari Himpunan Mahasiswa Informatika, Product yang akan di launching ini memiliki nilai modis dan trendy bagi anak IT.",
+    "status": "released",
+    "category": "Clothes",
+    "image": "products/20251107_142234_JP7N9pSb.png",
+    "variants": [
+      {
+        "id": 11,
+        "product_id": 4,
+        "name": "CRM | Lengan Panjang M",
+        "sku": "JKT-INF-LG-M-CRM",
+        "price": "135000.00",
+        "stock": 10,
+        "created_at": "2025-10-31T00:36:26.000000Z",
+        "updated_at": "2025-10-31T00:36:26.000000Z"
+      },
+      {
+        "id": 12,
+        "product_id": 4,
+        "name": "CRM | Lengan Panjang L",
+        "sku": "JKT-INF-LG-L-CRM",
+        "price": "140000.00",
+        "stock": 10,
+        "created_at": "2025-10-31T00:37:27.000000Z",
+        "updated_at": "2025-10-31T00:36:26.000000Z"
+      },
+      {
+        "id": 13,
+        "product_id": 4,
+        "name": "CRM | Lengan Panjang XL",
+        "sku": "JKT-INF-LG-XL-CRM",
+        "price": "145000.00",
+        "stock": 12,
+        "created_at": "2025-10-31T00:39:07.000000Z",
+        "updated_at": "2025-10-31T00:39:07.000000Z"
+      },
+      {
+        "id": 14,
+        "product_id": 4,
+        "name": "CRM | Lengan Panjang XXL",
+        "sku": "JKT-INF-LG-XXL-CRM",
+        "price": "150000.00",
+        "stock": 10,
+        "created_at": "2025-10-31T00:39:39.000000Z",
+        "updated_at": "2025-10-31T00:39:39.000000Z"
+      },
+      {
+        "id": 48,
+        "product_id": 4,
+        "name": "BLCK | Lengan Panjang M",
+        "sku": "JKT-INF-LG-M-BLCK",
+        "price": "135000.00",
+        "stock": 10,
+        "created_at": "2025-10-31T01:36:26.000000Z",
+        "updated_at": "2025-10-31T00:36:26.000000Z"
+      },
+      {
+        "id": 49,
+        "product_id": 4,
+        "name": "BLCK | Lengan Panjang L",
+        "sku": "JKT-INF-LG-L-BLCK",
+        "price": "140000.00",
+        "stock": 10,
+        "created_at": "2025-10-31T01:37:27.000000Z",
+        "updated_at": "2025-10-31T00:36:26.000000Z"
+      },
+      {
+        "id": 50,
+        "product_id": 4,
+        "name": "BLCK | Lengan Panjang XL",
+        "sku": "JKT-INF-LG-XL-BLCK",
+        "price": "145000.00",
+        "stock": 12,
+        "created_at": "2025-10-31T01:39:07.000000Z",
+        "updated_at": "2025-10-31T00:39:07.000000Z"
+      },
+      {
+        "id": 51,
+        "product_id": 4,
+        "name": "BLCK | Lengan Panjang XXL",
+        "sku": "JKT-INF-LG-XXL-BLCK",
+        "price": "150000.00",
+        "stock": 10,
+        "created_at": "2025-10-31T01:39:39.000000Z",
+        "updated_at": "2025-10-31T00:39:39.000000Z"
+      }
+    ],
+    "galleries": [
+      {
+        "id": 8,
+        "product_id": 4,
+        "image": "product-galleries/20251107_124006_rwxDRv3A.png",
+        "created_at": "2025-10-31T01:46:05.000000Z",
+        "updated_at": "2025-11-07T05:40:06.000000Z"
+      },
+      {
+        "id": 9,
+        "product_id": 4,
+        "image": "product-galleries/20251107_142347_O8ErZOrG.png",
+        "created_at": "2025-10-31T01:46:15.000000Z",
+        "updated_at": "2025-11-07T07:23:47.000000Z"
+      },
+      {
+        "id": 23,
+        "product_id": 4,
+        "image": "product-galleries/20251107_123937_cVEypM3J.png",
+        "created_at": "2025-11-06T00:31:26.000000Z",
+        "updated_at": "2025-11-07T05:39:37.000000Z"
+      },
+      {
+        "id": 24,
+        "product_id": 4,
+        "image": "product-galleries/20251107_123317_X9OjlkiX.png",
+        "created_at": "2025-11-06T00:31:58.000000Z",
+        "updated_at": "2025-11-07T05:33:17.000000Z"
+      }
+    ],
+    "created_at": "2025-10-31T00:06:45.000000Z",
+    "updated_at": "2025-11-07T07:57:10.000000Z"
+  }
+}

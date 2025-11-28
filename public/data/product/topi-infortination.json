@@ -1,0 +1,70 @@
+{
+  "success": true,
+  "message": "Product fetched successfully.",
+  "data": {
+    "id": 10,
+    "name": "TOPI INFORTINATION",
+    "slug": "topi-infortination",
+    "description": "[ Topi Infortination ] Tingkatkan gaya dan semangatmu dengan Topi Infortination! Desain eksklusif dan bahan premium menjadikannya pilihan tepat untuk menemani aktivitas harianmu, baik di kampus maupun saat bersantai. Material: Rapel Denim dan Warna: Cream",
+    "status": "released",
+    "category": "Accessories",
+    "image": "products/20251031_071721_Mp66cHi2.png",
+    "variants": [
+      {
+        "id": 34,
+        "product_id": 10,
+        "name": "Cap Cream",
+        "sku": "TP-CP-C",
+        "price": "45000.00",
+        "stock": 10,
+        "created_at": "2025-10-31T00:55:50.000000Z",
+        "updated_at": "2025-10-31T00:56:27.000000Z"
+      },
+      {
+        "id": 35,
+        "product_id": 10,
+        "name": "Bucket Cream",
+        "sku": "TP-BK-C",
+        "price": "39000.00",
+        "stock": 10,
+        "created_at": "2025-10-31T00:56:22.000000Z",
+        "updated_at": "2025-10-31T00:56:22.000000Z"
+      },
+      {
+        "id": 36,
+        "product_id": 10,
+        "name": "Wash Cap Gray",
+        "sku": "TP-WC-G",
+        "price": "49000.00",
+        "stock": 10,
+        "created_at": "2025-10-31T00:57:09.000000Z",
+        "updated_at": "2025-10-31T00:57:09.000000Z"
+      }
+    ],
+    "galleries": [
+      {
+        "id": 11,
+        "product_id": 10,
+        "image": "product-galleries/20251031_084715_FPNsI1TV.png",
+        "created_at": "2025-10-31T01:47:15.000000Z",
+        "updated_at": "2025-10-31T01:47:15.000000Z"
+      },
+      {
+        "id": 12,
+        "product_id": 10,
+        "image": "product-galleries/20251031_084731_cDWUnNWR.png",
+        "created_at": "2025-10-31T01:47:31.000000Z",
+        "updated_at": "2025-10-31T01:47:31.000000Z"
+      },
+      {
+        "id": 13,
+        "product_id": 10,
+        "image": "product-galleries/20251031_084756_4N0FsxeD.png",
+        "created_at": "2025-10-31T01:47:56.000000Z",
+        "updated_at": "2025-10-31T01:47:56.000000Z"
+      }
+    ],
+    "created_at": "2025-10-31T00:17:21.000000Z",
+    "updated_at": "2025-10-31T01:03:14.000000Z"
+  }
+}

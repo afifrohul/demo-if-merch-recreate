@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "message": "FAQs fetched successfully.",
+  "data": [
+    {
+      "id": 1,
+      "question": "What kind of material is used for the T-shirts?",
+      "answer": "The material used for the T-shirts is Combed 24s, which is a high-quality 100% cotton screen print. This type of T-shirt is made from the best material, which is cooler and not hot.",
+      "created_at": "2025-10-30T22:38:20.000000Z",
+      "updated_at": "2025-11-06T07:56:19.000000Z"
+    },
+    {
+      "id": 2,
+      "question": "Why should you buy this product?",
+      "answer": "Because we sell 100% cotton clothing with designs that make you IT programmers look cooler and more stylish.",
+      "created_at": "2025-10-30T22:38:37.000000Z",
+      "updated_at": "2025-11-06T07:55:53.000000Z"
+    },
+    {
+      "id": 3,
+      "question": "How do I place an order through this website?",
+      "answer": "To place an order, select the desired product and then click “buy now,” which will redirect you to the payment page.",
+      "created_at": "2025-10-30T22:39:32.000000Z",
+      "updated_at": "2025-11-06T07:55:21.000000Z"
+    }
+  ]
+}

@@ -1,0 +1,363 @@
+"use client";
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import {
+  Marquee,
+  MarqueeContent,
+  MarqueeFade,
+  MarqueeItem,
+} from "@/components/ui/marquee";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
+  Field,
+  FieldError,
+  FieldGroup,
+  FieldLabel,
+} from "@/components/ui/field";
+import Image from "next/image";
+import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
+import SkeletonDetailProduct from "@/components/loader/detail-product";
+import { useParams } from "next/navigation";
+import Link from "next/link";
+import { ShoppingCartIcon } from "lucide-react";
+import { IoIosArrowBack } from "react-icons/io";
+import { motion } from "framer-motion";
+import { useDetailProducts, useProducts } from "@/hooks/content/useProducts";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Controller, useForm } from "react-hook-form";
+import * as z from "zod";
+import { toast } from "sonner";
+import { useState } from "react";
+import { Input } from "@/components/ui/input";
+
+const formSchema = z.object({
+  product_id: z.string(),
+  product_variant_id: z.string(),
+  quantity: z.string(),
+});
+
+export default function DetailProduct() {
+  const params = useParams<{ slug: string }>();
+  const { data: detailProduct, isLoading: loadingDetailProduct } =
+    useDetailProducts(params.slug);
+  const { data: products, isLoading: loadingProducts } = useProducts();
+  const [open, setOpen] = useState(false);
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      product_id: "",
+      product_variant_id: "",
+      quantity: "",
+    },
+  });
+
+  function onSubmit(data: z.infer<typeof formSchema>) {
+    toast.info("Demo version: this action is disabled.");
+  }
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{
+        duration: 1,
+        ease: [0.25, 0.1, 0.25, 1],
+      }}
+    >
+      <Link href={"/products"}>
+        <Button
+          variant={"outline"}
+          className="hover:cursor-pointer duration-200"
+        >
+          <IoIosArrowBack />
+          <p>Back to products</p>
+        </Button>
+      </Link>
+      <div className="space-y-4 mt-4">
+        <div className="bg-white dark:bg-black rounded-lg p-4 border">
+          {loadingDetailProduct ? (
+            <SkeletonDetailProduct></SkeletonDetailProduct>
+          ) : (
+            <div className="flex flex-col lg:flex-row justify-center">
+              <Carousel className="w-full lg:max-w-lg">
+                <CarouselContent>
+                  {detailProduct?.galleries.map((_, index) => (
+                    <CarouselItem
+                      key={index}
+                      className=" bg-white dark:bg-black flex justify-center items-center"
+                    >
+                      <div className="p-1">
+                        <Image
+                          src={`/${_.image}`}
+                          width={480}
+                          height={480}
+                          alt="php"
+                          className="p-2 w-48 md:w-76 lg:w-96"
+                          unoptimized
+                          loading="eager"
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+              <div className="lg:w-xl rounded lg:ml-24 px-4 py-12">
+                <div className="space-y-3">
+                  <h1 className="text-lg lg:text-3xl font-medium">
+                    {detailProduct?.name}
+                  </h1>
+                  <Separator></Separator>
+                  <p className="text-xs lg:text-sm">
+                    {detailProduct?.description}
+                  </p>
+                  <Separator></Separator>
+                  <div>
+                    <p className="text-lg font-medium">Product Variants</p>
+                    <div className="flex flex-wrap gap-x-2">
+                      {detailProduct?.variants.map((_, index) => (
+                        <div
+                          key={index}
+                          className="border w-fit py-1 px-2 rounded mt-2 hover:border-primary hover:cursor-pointer duration-200"
+                        >
+                          <p className="text-xs lg:text-sm">
+                            {_.name} @
+                            {new Intl.NumberFormat("id-ID", {
+                              style: "currency",
+                              currency: "IDR",
+                            }).format(_.price)}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="mt-4">
+                    <Dialog open={open} onOpenChange={setOpen}>
+                      <DialogTrigger asChild>
+                        <Button
+                          size={"sm"}
+                          className="w-full hover:cursor-pointer duration-200"
+                        >
+                          <ShoppingCartIcon />
+                          <p className="text-xs font-medium">Add to cart</p>
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-[425px]">
+                        <form onSubmit={form.handleSubmit(onSubmit)}>
+                          <DialogHeader>
+                            <DialogTitle>Add to cart</DialogTitle>
+                            <DialogDescription>
+                              Select product variant to add to your cart. Click
+                              add when you&apos;re done.
+                            </DialogDescription>
+                          </DialogHeader>
+                          <div className="grid gap-4">
+                            <div className="grid gap-3">
+                              <Controller
+                                name="product_id"
+                                control={form.control}
+                                render={({ field, fieldState }) => (
+                                  <Field data-invalid={fieldState.invalid}>
+                                    <FieldLabel htmlFor="product_id">
+                                      Product
+                                    </FieldLabel>
+                                    <Select
+                                      name={field.name}
+                                      value={String(field.value)}
+                                      onValueChange={field.onChange}
+                                    >
+                                      <SelectTrigger
+                                        id="form-rhf-select-language"
+                                        aria-invalid={fieldState.invalid}
+                                        className="min-w-[120px]"
+                                      >
+                                        <SelectValue placeholder="Select" />
+                                      </SelectTrigger>
+                                      <SelectContent position="item-aligned">
+                                        <SelectItem
+                                          value={String(detailProduct?.id)}
+                                        >
+                                          {detailProduct?.name}
+                                        </SelectItem>
+                                      </SelectContent>
+                                    </Select>
+                                    {fieldState.invalid && (
+                                      <FieldError errors={[fieldState.error]} />
+                                    )}
+                                  </Field>
+                                )}
+                              />
+                            </div>
+                            <div className="grid gap-3">
+                              <Controller
+                                name="product_variant_id"
+                                control={form.control}
+                                render={({ field, fieldState }) => (
+                                  <Field data-invalid={fieldState.invalid}>
+                                    <FieldLabel htmlFor="product_variant_id">
+                                      Product Variant
+                                    </FieldLabel>
+                                    <Select
+                                      name={field.name}
+                                      value={String(field.value)}
+                                      onValueChange={field.onChange}
+                                    >
+                                      <SelectTrigger
+                                        id="form-rhf-select-language"
+                                        aria-invalid={fieldState.invalid}
+                                        className="min-w-[120px]"
+                                      >
+                                        <SelectValue placeholder="Select" />
+                                      </SelectTrigger>
+                                      <SelectContent position="item-aligned">
+                                        {detailProduct?.variants.map(
+                                          (item, index) => (
+                                            <SelectItem
+                                              key={index}
+                                              value={String(item.id)}
+                                            >
+                                              {item.name}
+                                            </SelectItem>
+                                          )
+                                        )}
+                                      </SelectContent>
+                                    </Select>
+                                    {fieldState.invalid && (
+                                      <FieldError errors={[fieldState.error]} />
+                                    )}
+                                  </Field>
+                                )}
+                              />
+                            </div>
+                            <div className="grid gap-3">
+                              <Controller
+                                name="quantity"
+                                control={form.control}
+                                render={({ field, fieldState }) => (
+                                  <Field data-invalid={fieldState.invalid}>
+                                    <FieldLabel htmlFor="quantity">
+                                      Quantity
+                                    </FieldLabel>
+                                    <Input
+                                      {...field}
+                                      id="quantity"
+                                      aria-invalid={fieldState.invalid}
+                                      autoComplete="off"
+                                      placeholder="Min: 1"
+                                      type="number"
+                                      min={1}
+                                    />
+                                    {fieldState.invalid && (
+                                      <FieldError errors={[fieldState.error]} />
+                                    )}
+                                  </Field>
+                                )}
+                              />
+                            </div>
+                          </div>
+                          <DialogFooter className="mt-4">
+                            <DialogClose asChild>
+                              <Button variant="outline">Cancel</Button>
+                            </DialogClose>
+                            <Button>Add</Button>
+                          </DialogFooter>
+                        </form>
+                      </DialogContent>
+                    </Dialog>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+        <div>
+          <div className="space-y-4">
+            <div className="space-y-2 w-fit">
+              <p className="text-xl font-medium">Related Product</p>
+              <Separator></Separator>
+            </div>
+            <div className="flex size-full items-center justify-center bg-background">
+              <Marquee>
+                <MarqueeFade side="left" />
+                <MarqueeFade side="right" />
+                <MarqueeContent
+                  className="overflow-hidden"
+                  pauseOnHover={false}
+                >
+                  {loadingProducts
+                    ? Array.from({ length: 5 }).map((_, index) => (
+                        <MarqueeItem className="h-96 " key={index}>
+                          <Skeleton className="w-96 h-96"></Skeleton>
+                        </MarqueeItem>
+                      ))
+                    : products
+                        ?.filter(function (p) {
+                          return p.slug !== params.slug;
+                        })
+                        .map((_, index) => (
+                          <MarqueeItem className="h-64 lg:h-96 " key={index}>
+                            <div className="bg-white dark:bg-black relative flex justify-center items-center hover:border-primary duration-200 hover:cursor-pointer rounded border group h-full">
+                              <Link
+                                href={`/products/${_.slug}`}
+                                className="h-full flex justify-center items-center"
+                              >
+                                <Image
+                                  src={`/${_.image}`}
+                                  width={320}
+                                  height={320}
+                                  alt="php"
+                                  className="p-20 group-hover:scale-105 duration-300"
+                                  unoptimized
+                                />
+                                <div className="absolute rounded-full border left-2 top-48 lg:top-80">
+                                  <div className="flex items-center rounded-full border bg-white/70 p-1 text-xs font-semibold text-black backdrop-blur-md dark:border-neutral-800 dark:bg-black/70 dark:text-white">
+                                    <h3 className="mr-4 line-clamp-2 grow pl-2 leading-none tracking-tight">
+                                      {_.name}
+                                    </h3>
+                                    <p className="flex-none rounded-full bg-primary p-2 text-white">
+                                      {new Intl.NumberFormat("id-ID", {
+                                        style: "currency",
+                                        currency: "IDR",
+                                      }).format(_.price)}
+                                    </p>
+                                  </div>
+                                </div>
+                              </Link>
+                            </div>
+                          </MarqueeItem>
+                        ))}
+                </MarqueeContent>
+              </Marquee>
+            </div>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+}

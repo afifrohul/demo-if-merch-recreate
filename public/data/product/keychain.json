@@ -1,0 +1,76 @@
+{
+  "success": true,
+  "message": "Product fetched successfully.",
+  "data": {
+    "id": 3,
+    "name": "Keychain",
+    "slug": "keychain",
+    "description": "[ Keychain ] Bawa kunci dengan gaya menggunakan koleksi keychain IF Merch. Desain simpel dan praktis.Material: Akrilik",
+    "status": "released",
+    "category": "Merchandise",
+    "image": "products/20251031_072033_UHfUEoLM.png",
+    "variants": [
+      {
+        "id": 43,
+        "product_id": 3,
+        "name": "CATLAB",
+        "sku": "KC-CTL",
+        "price": "12000.00",
+        "stock": 10,
+        "created_at": "2025-10-31T01:09:01.000000Z",
+        "updated_at": "2025-10-31T01:09:01.000000Z"
+      },
+      {
+        "id": 44,
+        "product_id": 3,
+        "name": "BLUESCREEN",
+        "sku": "KC-BS",
+        "price": "12000.00",
+        "stock": 10,
+        "created_at": "2025-10-31T01:09:29.000000Z",
+        "updated_at": "2025-10-31T01:09:29.000000Z"
+      },
+      {
+        "id": 45,
+        "product_id": 3,
+        "name": "INFORMATICS",
+        "sku": "KC-INF",
+        "price": "12000.00",
+        "stock": 10,
+        "created_at": "2025-10-31T01:09:53.000000Z",
+        "updated_at": "2025-10-31T01:09:53.000000Z"
+      },
+      {
+        "id": 46,
+        "product_id": 3,
+        "name": "SIPERKAP",
+        "sku": "KC-SPK",
+        "price": "12000.00",
+        "stock": 10,
+        "created_at": "2025-10-31T01:10:14.000000Z",
+        "updated_at": "2025-10-31T01:10:14.000000Z"
+      },
+      {
+        "id": 47,
+        "product_id": 3,
+        "name": "INFORTINATION",
+        "sku": "KC-INFN",
+        "price": "12000.00",
+        "stock": 12,
+        "created_at": "2025-10-31T01:11:41.000000Z",
+        "updated_at": "2025-10-31T01:11:41.000000Z"
+      }
+    ],
+    "galleries": [
+      {
+        "id": 22,
+        "product_id": 3,
+        "image": "product-galleries/20251031_085412_W7cqDozX.png",
+        "created_at": "2025-10-31T01:54:12.000000Z",
+        "updated_at": "2025-10-31T01:54:12.000000Z"
+      }
+    ],
+    "created_at": "2025-10-30T23:53:39.000000Z",
+    "updated_at": "2025-10-31T00:20:33.000000Z"
+  }
+}
