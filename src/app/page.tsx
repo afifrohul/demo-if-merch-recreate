@@ -123,7 +123,7 @@ export default function Home() {
           <div className="bg-white dark:bg-black relative relative flex justify-center items-center hover:border-primary duration-200 hover:cursor-pointer   rounded border col-span-2 row-span-2 group">
             <Link href={"/products/t-shirt-javascript"}>
               <Image
-                src={"/product/jshd.png"}
+                src={"/product/jsb.png"}
                 width={720}
                 height={720}
                 alt="js"
@@ -147,7 +147,7 @@ export default function Home() {
           <div className="bg-white dark:bg-black relative flex justify-center items-center hover:border-primary duration-200 hover:cursor-pointer   rounded border col-start-3 group">
             <Link href={"/products/jacket-informatics"}>
               <Image
-                src={"/product/jacket.png"}
+                src={"/product/bbjacket.png"}
                 width={360}
                 height={360}
                 alt="php"
